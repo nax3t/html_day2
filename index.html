@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Our first website</title>
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- Paragraph and linked image -->
+		<p style="color: red; background-color: yellow;">This is a <em>long</em> <strong>paragraph</strong> with <b>words</b> and <i>stuff</i>.</p>
+		<a href="http://www.google.com" target="_blank">
+			<img src="https://media.giphy.com/media/3oEjHSuZnihHywNAoE/giphy.gif" alt="Sad guy in window" title="Guy In Window" style="width: 300px;">
+		</a>
+
+		<!-- Lists! -->
+		<form action="#">
+			<input type="text" id="list-item">
+			<input type="button" id="add-item" value="Add item">
+		</form>
+		<h2>Unordered list:</h2>
+		<ul id="u-list">
+			<li>Go grocery shopping</li>
+			<li>Eat lunch</li>
+			<li>Go to sleep</li>
+		</ul>
+
+		<h2>Ordered list:</h2>
+		<ol>
+			<li>Go swimming</li>
+			<li>Go grocery shopping</li>
+			<li>Eat lunch</li>
+			<li>Go to sleep</li>
+		</ol>
+
+		<!-- This is our table! -->
+		<table border="1px">
+			<thead>
+				<tr>
+					<th colspan="3">Title 1</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Column 1</td>
+					<td>Column 2</td>
+					<td>Column 3</td>
+				</tr>
+				<tr>
+					<td>Column 4</td>
+					<td>Column 5</td>
+					<td>Column 6</td>
+				</tr>
+			</tbody>
+		</table>
+	
+		<!-- iframe! -->
+		<p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/G8KpPw303PY" frameborder="0" allowfullscreen></iframe>
+		</p>
+
+		<!-- divs! -->
+		<div style="width: 60px; height: 50px; background: red; color: white;">A div</div>
+		<div style="width: 60px; height: 50px; background: purple; color: white;">Another Div</div>
+		<div style="width: 60px; height: 50px; background: blue; color: white;">Also a Div</div>
+		
+		<!-- span! -->
+		<p>
+			I like to eat <span style="color: red;">apples</span>, <span style="color: orange;">oranges</span>, and <span style="color: yellow;">bananas</span>.
+		</p>
+		<script type="text/javascript">
+			var input = $('#list-item'),
+					button = $('#add-item'),
+					uList = $('#u-list');
+
+			button.click(function(e) {
+				e.preventDefault();
+				uList.append("<li>"+input.val()+"</li>");
+			});
+		</script>
+	</body>
+</html>
